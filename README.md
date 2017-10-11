@@ -1,3 +1,5 @@
+NOTE: GitHub does not support photo EXIF data in Markdown, so some images are rotated. I have been unable to find a fix for this.
+
 # Midterm IoT Project
 
 Name: Robert Steilberg / rhs16
@@ -45,6 +47,10 @@ I wanted the rest of the enclosure to protect the microcontroller from the exter
 **Data Report**
 
 ![Data Report](report.png)
+
+**Blynk**
+
+![Blynk](blynk.png)
 
 
 ### Technical Details
