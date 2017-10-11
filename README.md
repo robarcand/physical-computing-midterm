@@ -11,29 +11,41 @@ Date: 12 October 2017
 
 MoistureMachine is a critical response to the concept of open data, data ownership, and corporate cloud surveillance and privacy. At its core, MoistureMachine is a comprehensive system for monitoring the environment around a plant, but importantly, all data collected by the microcontroller is always available and proactively delivered to the user.
 
+I started out by looking at a list of available sensor and actuators and building a device from the parts included in the SparkFun kit. I think that, once purchasing or owning a device, users should be able to see every data point collected from them or their property, especially if this data is subsequently pushed to the cloud and viewed or manipulated by someone else. Thus, I wanted to make the data collected by MoistureMachine not only available, but accessible, so that user's wouldn't have to dig for their data. With MoistureMachine, users automatically receive every single data point that is collected. Since MoistureMachine is open source, users can see exactly where their data is going and how it is being collected. However, since IFTTT is used for emails and notifications, there is a potential ambiguity associated with what IFTTT might do with user data. This is another important perspective revealed through this project--though I built an open-data and open-source device, it is nevertheless nearly impossible to escape completely protecting user data from non-user entities.
+
 MoistureMachine conforms to the principles of open data and user ownership through the following functionalities:
 
 1. Every four hours, the user is sent an email that contains all data points recorded by MoistureMachine during the previous four hourly runs (the time between each run can be customized, such as once every two hours with a report every eight hours)
 2. Data can be visualized in real-time through an applet on the Blynk platform
 3. The user can see the current soil saturation reading on the onboard OLED screen
 
+My ultimate goal through this project was to create a device through which users need not worry about how their data is being collected, who really owns it, and where it is going.
+
 
 ### Form
 
-/// Your project should be embodied in a ***physical form*** that reflects, embodies, and/or amplifies those your project's main concepts and ideas.
-Explain your design choices here and include images that document your project's material embodiment. ///
+When considering an enclosure for my device, it was important to leave both the OLED screen and temperature sensor exposed so that they could respectively convey and record accurate data. Furthermore, the moisture sensor had to be left exposed since it had to be placed in the plant soil. Importantly, I wanted the user to be able to easily move the moisture sensor to different parts of the soil, so I attached longer wires to make the sensor easily moveable and left it exposed. In this sense, the hardware itself is "open" to the user, in that the user has some control over how the hardware functions, since the user can choose where in the soil to place the moisture sensor.
 
-When considering an enclosure for my device, it was important to leave both the OLED screen and temperature sensor exposed so that they could respectively convey and record accurate data. The moisture sensor obviously had to be left exposed since it had to be placed in the plant soil. Importantly, I wanted the user to be able to easily move the moisture sensor to different parts of the soil, so I attached longer wires to make the sensor easily moveable.
-
-I wanted the rest of the enclosure to be relatively exposed and safe from the external environment. I used a cardboard box to make a platform that the plant could sit on top of so that I could place the microcontroller underneath. The OLED screen and temperature sensor require use of the breadboard, so one end of the breadboard is partially exposed so that those components are visible. This way, the user can easily glance at the plant and see the current saturation percentage, and the temperature sensor can properly record readings from the environment.
+I wanted the rest of the enclosure to protect the microcontroller from the external environment. Importantly, I needed to keep plant moisture away from the internal electronics. I used a cardboard box to make a platform that the plant could sit on top of so that I could place the microcontroller underneath. The plant sits in a water dish so that risk of water exposure is minimize. The OLED screen and temperature sensor require use of the breadboard, so one end of the breadboard is partially exposed so that those components are visible. This way, the user can easily glance at the plant and see the current saturation percentage, and the temperature sensor can properly record readings from the environment.
 
 **Finished Enclosure:**
 
-![Finished Enclosure](finished_enclosure.jpg)
+![Finished Enclosure](enclosure.jpg)
 
-**Electronics Exposed:**
+**Electronics Exposed**
 
-![Enclosure with electronics exposed](exposed_enclosure.jpg)
+![Enclosure with electronics exposed](device.jpg)
+
+![Enclosure with electronics exposed](device2.jpg)
+
+**Low Moisture Notification**
+
+![Low Moisture Notification](notification.png)
+
+**Data Report**
+
+![Data Report](report.png)
+
 
 ### Technical Details
 
@@ -44,6 +56,8 @@ The following pieces of hardware were used:
 * SparkFun Micro OLED Breakout
 * RHT03 Temperature and Humidity sensor
 * SparkFun Soil Moisture Sensor
+
+The moisture sensor was difficult to calibrate. The sensor itself is very sensitive and must be calibrated to the particular soil type that you are using. As a result, results may vary when used with a different plant.
 
 The source repository for the MoistureMachine can be found [here](https://github.com/robertsteilberg/MoistureMachine). The firmware is linked [here](https://github.com/robertsteilberg/MoistureMachine/blob/master/src/MoistureMachine.ino).
 
@@ -64,7 +78,7 @@ int scaleReading(int rawReading) {
 
 After reading sensor data, the values are pushed to Blynk so that users can monitor their data in real-time. Then, an event is published to `rob-camila`, triggering Camila Vargas' device to sound a tone from its Piezo speaker.
 
-Afterwards, the sensor data is summarized in a string that is added to a `summary` instance variable containing all data points collected thus far. After four runs of the loop, the `DATA_REPORT` event is published, and the `summary` instance variable is pushed along with it. Via IFTTT, this string is placed in the body of an email sent to the user summarizing all data collected in the four runs.
+Afterwards, the sensor data is summarized in a string that is added to a `summary` instance variable containing all data points collected thus far. After four runs of the loop, the `DATA_REPORT` event is published, and the `summary` instance variable is pushed along with it. Via IFTTT, this string is placed in the body of an email sent to the user summarizing all data collected in the four runs. This email report was a bit difficult to set up, since there is a 255 byte limit on payloads sent to IFTTT for an email trigger. As a result, I am limited to delivering four runs of data per email.
 
 Lastly, the `summary` instance variable is cleared, the number of runs reset, and the loop repeats after the time described by `DELAY`.
 
@@ -73,3 +87,9 @@ There is also a function, `externalAlert`, that accepts an event `rob-camila` pu
 **Wiring Diagram**
 
 ![Wiring Diagram](wiring_diagram.jpg)
+
+**Works Cited**
+
+* [Moisture sensor tutorial](https://learn.sparkfun.com/tutorials/soil-moisture-sensor-hookup-guide)
+
+* [OLED screen tips](https://learn.sparkfun.com/tutorials/sparkfun-inventors-kit-for-photon-experiment-guide/experiment-10-pong)
