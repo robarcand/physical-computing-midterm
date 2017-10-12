@@ -1,0 +1,56 @@
+Hi, I’m a BlackBox.
+
+I weigh 13.5 oz.
+
+I contain a Photon RedBoard by Particle.io and a Self-Adhesive Breadboard from SparkFun Electronics in Niwot, Colorado, USA.
+
+I also contain one Red Tactile Button, one 330 Ohm Carbon Film Resistor, four 160 mm Jumper Wires, and a 9V battery by Rayovac and connected through a two-channel power supply.
+
+My four 160 mm Jumper Wires are each made of a stranded copper alloy with gold-plated connector pins each encased in molded plastic.
+
+Most copper comes from mines in Chile, Peru, Mexico, and Indonesia.
+
+My Red Tactile Button contains a molded plastic base held down by an aluminium veneer with two molded plastic mechanical parts, as well as a red mold plastic cap.
+
+Most plastics are made from crude oil which is heated and distilled into something called naphtha, which is then heated and molded into polymers based on its purpose.
+
+My Carbon Film Resistor is made of a carbon track wrapped around ceramic and a nickel alloy rod designed and for use in small voltage electronics.
+
+Most raw carbon is mined as graphite from India, Mexico, Sri Lanka, Korea and Madagascar.
+
+Most nickel is mined and later smelted in countries like Russia, Canada, New Caledonia, Australia, Indonesia, Cuba, China, South Africa, Dominican Republic, Botswana, Colombia, Greece and Brazil.  
+
+My 9V 6LF22 battery by Rayovac contains six individual 1.5V LR61 cells with an alkaline chemistry made up of nickel-cadmium, nickel-metal hydride and lithium-ion. It was made in Malaysia.
+
+The wire connecting the battery to the Photon RedBoard is a stranded copper alloy coated in YDPU2/8 PVC tubing. It was made in China.
+
+My outer casing is made of a polyamide Nylon and 3D printed on a Ultimaker 2 in the Innovation Co-Lab Studio at Duke University in Durham, North Carolina, USA.
+
+It was 3D printed using a process called Fused Deposition Modeling and is based on an open-source model of the casing for the Apple TV created by StudioPieters and published on the site thingiverse.com on Aug 11, 2017.
+
+It was painted using Krylon Midnight Sky satin spray paint designed for plastics, metals, and brick. It contains acetone, propane, butane, acetates, Ethyl 3-Ethoxypropionate and Xylene and is extremely flammable.
+
+The Photon RedBoard by Particle.io includes a Particle P1 Wi-Fi Module, which is made of a Broadcom BCM43362 Wi-Fi chip with 802.11b/g/n Wi-Fi and an integrated PCB antenna.
+
+The Photon RedBoard is powered by a 120Mhz ARM Cortex M3 STM32F205RGY6 from STMicroelectronics based in Geneva, Switzerland.
+
+The ARM Cortex M3 on the Photon RedBoard contains 1MB of flash memory and 128KB of random access memory, as well as 1MB external SPI flash memory (MX25L8006E)
+
+I also contain a 84 x 53.3 x 8.3mm White Solderless Breadboard made from ABS plastic with phosphor bronze nickel plated spring clips. It was manufactured by Kondson Electronics in Ningbo, Zhejiang, China.
+
+The SparkFun Redboard communicates with Particle.io, a private network for their internet-connected hardware.
+
+Particle is owned by Heroku and hosts its data on servers owned by Amazon Web Services and sells marketing data to Salesforce.
+
+Amazon Web Services houses data in high-volume servers located in Virginia, Ohio, California, Oregon, Mumbai, Seoul, Singapore, Sydney, Tokyo, Canada, Beijing, Frankfurt, Ireland, London, and São Paulo.
+
+Salesforce maintains servers in the Americas, Asia, and Europe.
+
+Particle’s IDE system also communicates with Yahoo Analytics, Google AdSense, Facebook Signal, LinkedIn Ads, New Relic, Intercom, and other platforms for analytics.
+
+Yahoo houses data in high-volume servers located in Quincy, WA, Omaha, NE, Chicago, IL Singapore and Lockport, NY.
+
+Google houses data in high-volume servers in Quilicura, Chile, Saint-Ghislain, Belgium, Hamina, Finland, Dublin, Ireland, Eemshaven, Netherlands, Jurong West, Singapore, Changhua County, Taiwan, as well as throughout the United States.
+
+Though known to lease servers with third-party companies like Coresite, DuPont Fabros and Digital Realty Trust in the US, Facebook houses much of its own data in high-volume servers in Sweden, Ireland, as well as throughout the United States.
+LinkedIn houses data in high-volume servers in Chicago, Portland, Los Angeles, and Singapore.
