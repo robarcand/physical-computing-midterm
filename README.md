@@ -44,11 +44,7 @@ By basing the design on the casing for the Apple TV, I hoped to establish visual
 	
 ### Explanation of Code
 
-The project is composed of a simple
-
-
-### Link to code   
-Using a switch counter and a series of case options, each press of the push button triggers a sequential phrase via notification in Blynk. First, the program connects to Blynk using the Blank auth token system:
+The project is composed of a simple loop system using a switch counter and a series of case options. Each press of the push button triggers a sequential phrase via notification in Blynk. First, the program connects to Blynk using the Blank auth token system:
 
 ```
 char auth[] = "aad113f6ec594a71a975c3a1fd4628ad";
@@ -135,6 +131,7 @@ void myHandler(const char *event, const char *data) {
   }
 }
 ```
+### Link to code 
 
 Project Software: [blackbox.ino](blackbox.ino)
 
